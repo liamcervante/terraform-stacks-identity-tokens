@@ -12,6 +12,9 @@ Once the Terraform configuration has been applied you should save the following 
 2. `Application (client) ID` of the registered application created by this terraform setup.
 3. `Subscription ID` of your Azure account.
 
+**Warning**
+The `Contributor` role assignment is just used as an example. This is not recommended for production workloads.
+
 ## Terraform Stacks
 
 Once the above setup is complete, we can go ahead and proceed with running Terraform Stack operations.
