@@ -45,7 +45,7 @@ resource "azuread_application_federated_identity_credential" "tfc_federated_cred
   display_name          = "my-tfc-federated-credential-plan"
   audiences             = [var.tfc_azure_audience]
   issuer                = "https://${var.tfc_hostname}"
-  subject               = "organization:zain-stacks-testing:project:Default Project:stack:azure-stacks-example:deployment:production:operation:plan"
+  subject               = "organization:${var.tfc_organization}:project:${var.tfc_project}:stack:${var.tfc_stack}:deployment:${var.tfc_deployment}:operation:plan"
 }
 
 # Creates a federated identity credential which ensures that the given
@@ -57,6 +57,6 @@ resource "azuread_application_federated_identity_credential" "tfc_federated_cred
   display_name          = "my-tfc-federated-credential-apply"
   audiences             = [var.tfc_azure_audience]
   issuer                = "https://${var.tfc_hostname}"
-  subject               = "organization:zain-stacks-testing:project:Default Project:stack:azure-stacks-example:deployment:production:operation:apply"
+  subject               = "organization:${var.tfc_organization}:project:${var.tfc_project}:stack:${var.tfc_stack}:deployment:${var.tfc_deployment}:operation:apply"
 }
 

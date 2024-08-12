@@ -9,3 +9,20 @@ variable "tfc_hostname" {
   default     = "app.terraform.io"
   description = "The hostname of the TFC or TFE instance you'd like to use with Azure"
 }
+
+variable "tfc_organization" {
+  type = string
+}
+
+variable "tfc_project" {
+  type = string
+}
+
+variable "tfc_stack" {
+  type = string
+}
+
+variable "tfc_deployment" {
+  type = string
+}
+
