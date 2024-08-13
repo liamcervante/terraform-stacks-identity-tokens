@@ -24,7 +24,7 @@ locals {
   # You can widen access here to an entire organization or project by
   # tweaking the value below. You can also restrict access to specific
   # deployments or operations. See the User Guide for more info.
-  sub_regex = "^organization:${var.tfc_organization}:project:${var.tfc_project}:stack:${var.tfc_stack}:.*"
+  sub_regex = "^organization:${var.tfc_organization}:project:${var.tfc_project}:stack:${var.tfc_stack}:deployment:${var.tfc_deployment}"
 }
 
 resource "hcp_iam_workload_identity_provider" "stacks_identity_provider" {
