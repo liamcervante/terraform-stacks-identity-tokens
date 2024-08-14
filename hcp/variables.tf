@@ -17,7 +17,3 @@ variable "tfc_project" {
 variable "tfc_stack" {
   type = string
 }
-
-variable "tfc_deployment" {
-  type = string
-}
