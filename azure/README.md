@@ -6,11 +6,11 @@ This directory contains the terraform code to create an Azure Service Principal 
 
 To execute this configuration you will need to give Terraform access to the relevant Azure account. Refer the [following](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#authenticating-to-azure) terraform provider docs to authenticate with Azure.
 
-Once the Terraform configuration has been applied you should save the following from your Azure account:
+Once the Terraform configuration has been applied you should save the following from your terraform output:
 
-1. `Tenant ID` of the Azure AD/Microsoft Entra ID service.
-2. `Application (client) ID` of the registered application created by this terraform setup.
-3. `Subscription ID` of your Azure account.
+1. `tenant_id` of the Azure AD/Microsoft Entra ID service.
+2. `client_id` of the registered application created by this terraform setup.
+3. `subscription_id` of your Azure account.
 
 **Warning**
 The `Contributor` role assignment is just used as an example. This is not recommended for production workloads.

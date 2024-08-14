@@ -60,3 +60,14 @@ resource "azuread_application_federated_identity_credential" "tfc_federated_cred
   subject               = "organization:${var.tfc_organization}:project:${var.tfc_project}:stack:${var.tfc_stack}:deployment:${var.tfc_deployment}:operation:apply"
 }
 
+output "subscription_id" {
+  value = data.azurerm_subscription.current.subscription_id
+}
+
+output "client_id" {
+  value = azuread_application.tfc_application.client_id
+}
+
+output "tenant_id" {
+  value = azuread_service_principal.tfc_service_principal.application_tenant_id
+}
